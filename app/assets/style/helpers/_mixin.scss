@@ -1,0 +1,11 @@
+@mixin banner-image($url) {
+  background: url($url);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
