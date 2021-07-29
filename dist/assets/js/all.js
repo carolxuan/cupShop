@@ -69,9 +69,6 @@ $(document).ready(function () {
    * 查看商品明細
    * @param {object} e 點擊事件的物件
    */
-  // function viewProductDetail(e) {
-  //   location.href = "detail.html";
-  // }
   // 加入滑動的偵聽事件
 
 
@@ -107,6 +104,5 @@ function openClass(evt, cityName) {
 
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-} // Get the element with id="defaultOpen" and click on it
-// document.getElementById("defaultOpen").click();
+}
 //# sourceMappingURL=all.js.map

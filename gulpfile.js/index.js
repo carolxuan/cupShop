@@ -1,9 +1,15 @@
 const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 const $ = require('gulp-load-plugins')({ lazy: false });
 const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
+
+gulp.task('deploy', () => {
+  return gulp.src('./public/**/*')
+    .pipe($.ghPages());
+});
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
