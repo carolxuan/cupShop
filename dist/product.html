@@ -121,61 +121,30 @@
   <!--start menu 商品選單-->
   <div class="menu mb-3 mb-md-5">
     <div class="container">
-      <ul class="d-flex mb-0">
+      <ul class="d-flex mb-0 menuBox">
         <li class="mr-3 mr-md-8">
-          <div class="menuLink" id="defaultOpen" onclick="openClass(event, 'all')">
-            <p class="py-2 py-md-3">
-              All
-              <sup>24</sup>
-            </p>
+          <div class="menuLink">
+            <p class="py-2 py-md-3 active" data-item="All">All<sup>24</sup></p>
           </div>
         </li>
         <li class="mr-3 mr-md-8">
-          <div
-            class="menuLink"
-            id="defaultOpen"
-            onclick="openClass(event, 'bowl')"
-          >
-            <p class="py-2 py-md-3">
-              Bowl
-              <sup>10</sup>
-            </p>
+          <div class="menuLink">
+            <p class="py-2 py-md-3" data-item="Bowl">Bowl<sup>10</sup></p>
           </div>
         </li>
         <li class="mr-3 mr-md-8">
-          <div
-            class="menuLink"
-            id="defaultOpen"
-            onclick="openClass(event, 'Cup')"
-          >
-            <p class="py-2 py-md-3">
-              Cup
-              <sup>8</sup>
-            </p>
+          <div class="menuLink">
+            <p class="py-2 py-md-3" data-item="Cup">Cup<sup>8</sup></p>
           </div>
         </li>
         <li class="mr-3 mr-md-8">
-          <div
-            class="menuLink"
-            id="defaultOpen"
-            onclick="openClass(event, 'Plate')"
-          >
-            <p class="py-2 py-md-3">
-              Plate
-              <sup>3</sup>
-            </p>
+          <div class="menuLink">
+            <p class="py-2 py-md-3" data-item="Plate">Plate<sup>3</sup></p>
           </div>
         </li>
         <li class="mr-3 mr-md-8">
-          <div
-            class="menuLink"
-            id="defaultOpen"
-            onclick="openClass(event, 'Vase')"
-          >
-            <p class="py-2 py-md-3">
-              Vase
-              <sup>3</sup>
-            </p>
+          <div class="menuLink">
+            <p class="py-2 py-md-3" data-item="Vase">Vase<sup>3</sup></p>
           </div>
         </li>
       </ul>
@@ -188,7 +157,6 @@
     <div class="container">
       <div class="menuContent" id="all">
         <div class="card-columns d-flex flex-wrap d-md-block">
-          <!-- card-1 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 mr-1 order-1">
             <a href="detail.html">
               <div class="product-img position-relative mb-1">
@@ -206,7 +174,6 @@
               </div>
             </a>
           </div>
-          <!-- card-2 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 order-4">
             <div class="product-img mb-1">
               <img class="h-240 w-100" src="./assets/images/product-2.jpg" />
@@ -216,7 +183,6 @@
               <span>NT$2,400</span>
             </div>
           </div>
-          <!-- card-3 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 mr-1 order-7">
             <div class="product-img mb-1">
               <img class="h-480" src="./assets/images/product-3.jpg" />
@@ -226,7 +192,6 @@
               <span>NT$980</span>
             </div>
           </div>
-          <!-- card-4 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 order-2">
             <div class="product-img position-relative mb-1">
               <img class="h-480 w-100" src="./assets/images/product-4.jpg" />
@@ -242,7 +207,6 @@
               <del>NT$3,880</del>
             </div>
           </div>
-          <!-- card-5 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 mr-1 order-6">
             <div class="product-img mb-1">
               <img class="h-350" src="./assets/images/product-5.jpg" />
@@ -252,7 +216,6 @@
               <span>NT$4,800</span>
             </div>
           </div>
-          <!-- card-6 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 order-8">
             <div class="product-img mb-1">
               <img class="h-240 w-100" src="./assets/images/product-6.jpg" />
@@ -262,7 +225,6 @@
               <span>NT$1,200</span>
             </div>
           </div>
-          <!-- card-7 -->
           <div class="product-content--card mb-3 mb-md-5 mr-md-0 mr-1 order-3">
             <div class="product-img position-relative mb-1">
               <img class="h-240 w-100" src="./assets/images/product-7.jpg" />
@@ -278,7 +240,6 @@
               <del>NT$1,980</del>
             </div>
           </div>
-          <!-- card-8 -->
           <div class="product-content--card md-3 mb-md-5 mr-md-0 order-6">
             <div class="product-img mb-1">
               <img class="h-480" src="./assets/images/product-8.jpg" />
@@ -288,7 +249,6 @@
               <span>NT$3,600</span>
             </div>
           </div>
-          <!-- card-9 -->
           <div class="product-content--card mb-5 mr-md-0 mr-1 order-9">
             <div class="product-img mb-1">
               <img class="h-350 w-100" src="./assets/images/product-9.jpg" />
@@ -299,25 +259,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- 分頁 -->
-      <div class="menuContent" id="bowl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo mollitia,
-        amet neque consectetur qui magnam explicabo similique reiciendis nobis!
-        Velit itaque qui unde ullam eum neque nihil ex placeat consectetur.
-      </div>
-      <div class="menuContent" id="Cup">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-        molestiae voluptas facilis nesciunt laborum voluptatem quam et, corrupti
-        sequi commodi.
-      </div>
-      <div class="menuContent" id="Plate">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste?
-      </div>
-      <div class="menuContent" id="Vase">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-        repellat voluptates eligendi, non a repellendus molestiae quas ratione
-        molestias eos?
       </div>
     </div>
     <!-- 頁碼 -->

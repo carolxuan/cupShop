@@ -12190,6 +12190,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.menuLink p.active {
+  color: #0e8a00;
+  font-weight: 700;
+}
+
 @media (max-width: 768px) {
   .product-content--card {
     width: 48.7%;

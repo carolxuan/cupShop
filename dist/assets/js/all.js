@@ -31,20 +31,12 @@ $(document).ready(function () {
 (function () {
   var slider = document.querySelector(".slider");
   var productCards = document.querySelectorAll(".product-card");
-  var startX = 0;
-  /**
-   * 開始拖曳事件
-   * @param {object} e event
-   */
+  var startX = 0; // 開始拖曳事件
 
   function startDragHandler(e) {
     slider.classList.add("slider-active");
     startX = e.pageX;
-  }
-  /**
-   * 拖曳事件
-   * @param {object} e event
-   */
+  } // 拖曳事件
 
 
   function dragHandler(e) {
@@ -55,21 +47,12 @@ $(document).ready(function () {
       slider.scrollLeft -= (e.pageX - startX) * 3;
       startX = e.pageX;
     }
-  }
-  /**
-   * 停止拖曳事件
-   * @param {object} e event
-   */
+  } // 停止拖曳事件
 
 
   function stopDragHandler(e) {
     slider.classList.remove("slider-active");
-  }
-  /**
-   * 查看商品明細
-   * @param {object} e 點擊事件的物件
-   */
-  // 加入滑動的偵聽事件
+  } // 加入滑動的偵聽事件
 
 
   if (slider) {
@@ -77,32 +60,21 @@ $(document).ready(function () {
     slider.addEventListener("mousemove", dragHandler);
     slider.addEventListener("mouseup", stopDragHandler);
     slider.addEventListener("mouseleave", stopDragHandler);
-  } // 加入 product card 的偵聽事件
-
-
-  if (productCards.length) {
-    productCards.forEach(function (item) {
-      item.addEventListener("click", viewProductDetail);
-    });
   }
-})(); // menuContent
+})(); // menu active
 
 
-function openClass(evt, cityName) {
-  var i, menuContent, menuLink;
-  menuContent = document.getElementsByClassName("menuContent");
+var menuBoxItem = document.querySelectorAll('.menuBox p');
+menuBoxItem.forEach(function (el) {
+  el.addEventListener('click', handelMenu);
+});
 
-  for (i = 0; i < menuContent.length; i++) {
-    menuContent[i].style.display = "none";
-  }
-
-  menuLink = document.getElementsByClassName("menuLink");
-
-  for (i = 0; i < menuLink.length; i++) {
-    menuLink[i].className = menuLink[i].className.replace(" active", "");
-  }
-
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+function handelMenu(e) {
+  var itemTarget = e.target;
+  var valueTarget = itemTarget.dataset.item;
+  menuBoxItem.forEach(function (item) {
+    item.classList.remove('active');
+  });
+  itemTarget.classList.add('active');
 }
 //# sourceMappingURL=all.js.map
